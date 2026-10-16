@@ -33,6 +33,7 @@ button {
 
 /* Scrivi qui sotto i tuoi stili */
 main{
+  margin: 0 auto;
   max-width: 1200px;
 }
 
@@ -238,7 +239,7 @@ main{
   border-radius: 8px;
   overflow: hidden;
   border-radius: 5px;
-  height: 400px;
+  height: 420px;
 }
 
 .immagine{
@@ -251,4 +252,67 @@ line-height: 250px;
   color: black;
   font-size: 40px;
   background-color: #EEEEEE ;
+}
+
+.prodotto h4{
+  font-size: 14px;
+  min-height: 40px;
+ margin-left: 10px;
+}
+/*stelle*/
+.stelle{
+  color: #FF9900 ;
+  margin-left: 10px;
+}
+.stelle span{
+  color: #007185;
+}
+/*prezzo e aggiungi al carrello*/
+.prezzo{
+  margin-left: 10px;
+  color: #B12805;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.aggiungi{
+  display: block;
+  width: 80%;
+  text-align: center;
+  padding: 8px;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #ffd814;
+  border-radius: 20px;
+}
+
+.aggiungi:hover{
+  background-color: #F7CA00 ;
+}
+
+/* footer */
+footer{
+  background-color: #232F3E;
+  color: white;
+  padding: 30px 20px;
+  overflow: hidden;
+}
+
+.colonne{
+float: left;
+width: 33%;
+}
+
+.colonne h4{
+   margin: 20px 10px;
+}
+
+.colonne ul{
+  list-style: none;
+}
+
+.colonne ul li{
+  margin: 5px 10px;
+  text-align: left;
 }
