@@ -32,7 +32,7 @@ button {
 }
 
 /* Scrivi qui sotto i tuoi stili */
-main{
+main {
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -42,6 +42,14 @@ main{
   background-color: #131921;
   padding: 10px 20px;
   overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hero{
+  width: 100%;
+  box-sizing: border-box;
 }
 /*logo*/
 .logo {
@@ -242,40 +250,40 @@ main{
   height: 420px;
 }
 
-.immagine{
-width: 250px;
-height: 250px;
-line-height: 250px;
-   margin: 10px;
+.immagine {
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  margin: 10px;
   vertical-align: center;
   text-align: center;
   color: black;
   font-size: 40px;
-  background-color: #EEEEEE ;
+  background-color: #eeeeee;
 }
 
-.prodotto h4{
+.prodotto h4 {
   font-size: 14px;
   min-height: 40px;
- margin-left: 10px;
-}
-/*stelle*/
-.stelle{
-  color: #FF9900 ;
   margin-left: 10px;
 }
-.stelle span{
+/*stelle*/
+.stelle {
+  color: #ff9900;
+  margin-left: 10px;
+}
+.stelle span {
   color: #007185;
 }
 /*prezzo e aggiungi al carrello*/
-.prezzo{
+.prezzo {
   margin-left: 10px;
-  color: #B12805;
+  color: #b12805;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.aggiungi{
+.aggiungi {
   display: block;
   width: 80%;
   text-align: center;
@@ -287,32 +295,39 @@ line-height: 250px;
   border-radius: 20px;
 }
 
-.aggiungi:hover{
-  background-color: #F7CA00 ;
+.aggiungi:hover {
+  background-color: #f7ca00;
 }
 
 /* footer */
-footer{
-  background-color: #232F3E;
+footer {
+  background-color: #232f3e;
   color: white;
   padding: 30px 20px;
   overflow: hidden;
 }
 
-.colonne{
-float: left;
-width: 33%;
+.colonne {
+  float: left;
+  width: 33%;
 }
 
-.colonne h4{
-   margin: 20px 10px;
+.colonne h4 {
+  margin: 20px 10px;
 }
 
-.colonne ul{
+.colonne ul {
   list-style: none;
+
 }
 
-.colonne ul li{
+.colonne ul li {
   margin: 5px 10px;
-  text-align: left;
+
+}
+/* main html 2*/
+.mainProgetto{
+  min-height: 100vh;
+  box-sizing: border-box;
+  
 }

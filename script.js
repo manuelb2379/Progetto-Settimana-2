@@ -15,6 +15,107 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const prodotti = [
+
+   {
+      nome: "Cuffie Wireless Noise-Cancelling",
+      categoria: "Audio",
+      prezzo: 149.50,
+      rating: 1.5,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "iPad Pro",
+      categoria: "Elettronica",
+      prezzo: 699.99,
+      rating: 2.8,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Tastiera Meccanica Logitech",
+      categoria: "Informatica",
+      prezzo: 89.99,
+      rating: 4.2,
+      immagine: "https://placeholder.com",
+      disponibile: false
+   },
+   {
+
+      nome: "Monitor Gaming",
+      categoria: "Informatica",
+      prezzo: 249.00,
+      rating: 4.6,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Macchina Nespresso",
+      categoria: "Elettrodomestici",
+      prezzo: 119.99,
+      rating: 4.4,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Zaino Porta PC",
+      categoria: "Accessori",
+      prezzo: 39.99,
+      rating: 3.1,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Smartwatch Sport GPS",
+      categoria: "Elettronica",
+      prezzo: 199.00,
+      rating: 4.3,
+      immagine: "https://placeholder.com",
+      disponibile: false
+   },
+   {
+      nome: "Delitto e castigo",
+      categoria: "Libri",
+      prezzo: 20.00,
+      rating: 4.7,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Mouse Ottico Wireless",
+      categoria: "Informatica",
+      prezzo: 24.99,
+      rating: 4.0,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Cassa Bluetooth Portatile",
+      categoria: "Audio",
+      prezzo: 59.99,
+      rating: 4.5,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Lampada da Scrivania LED",
+      categoria: "Illuminazione",
+      prezzo: 29.99,
+      rating: 4.2,
+      immagine: "https://placeholder.com",
+      disponibile: true
+   },
+   {
+      nome: "Il conte di Montecristo",
+      categoria: "Libri",
+      prezzo: 34.00,
+      rating: 4.4,
+      immagine: "https://placeholder.com",
+      disponibile: false
+   }
+]
+console.log(prodotti)
 
 
 /* VERSIONE INTERMEDIA — formattaPrezzo(prezzo)
@@ -23,6 +124,21 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function formattaPrezzo(prezzo){
+   let testo = String(prezzo);
+   testo = testo.replace ("." , ",");
+
+  if (!testo.includes(",")) {
+    testo = testo + ",00";
+  } else if (testo.split(",")[1].length === 1) {
+    testo = testo + "0";
+  }
+    return "€ " + testo;
+}
+
+for (let i = 0; i < prodotti.length; i++) {
+  console.log(prodotti[i].nome + ": " + formattaPrezzo(prodotti[i].prezzo));
+}
 
 
 /* VERSIONE INTERMEDIA — stelline(rating)
@@ -33,11 +149,40 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function stelline(rating) {
+   let stelle = Math.round(rating);
+   let result = "";
+
+   for (let i = 0; i < 5; i++) {
+    if (i < stelle) {
+      result = result + "★";
+    } else {
+      result = result + "☆";
+    }
+  }
+
+  return result;
+}
+
+for (let j = 0; j < prodotti.length; j++) {
+  console.log(prodotti[j].nome + ": rating " + prodotti[j].rating + " → " + stelline(prodotti[j].rating));
+}
+
+
 /* VERSIONE INTERMEDIA — Filtro per categoria
    Funzione che riceve il parametro categoria e filtra l'array prodotti mostrando solo i prodotti della categoria ricevuta
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function cat(categoria) {
+   for(let i = 0; i < prodotti.length; i++)
+      if(prodotti[i].categoria === categoria){
+         console.log(prodotti[i].nome);
+      }
+}
+
+cat('Informatica');
 
 /* VERSIONE INTERMEDIA — Filtro disponibilità e rating
    Funzione che genera un array filtrato dall'array prodotti, mostrando soltanto i prodotti disponibili con rating >= 3
@@ -45,6 +190,17 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let filter = [];
+
+function filtro(){
+   for(let i = 0; i < prodotti.length; i++){
+      if (prodotti[i].disponibile === true && prodotti[i].rating >= 3){
+         filter.push(prodotti[i]);
+      }
+   }
+}
+filtro()
+console.log(filter)
 /* --------------------------------------------------------------
 
 /* VERSIONE AVANZATA — renderProdotti(lista)
