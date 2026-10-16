@@ -1,29 +1,159 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amazon Homepage — Week Project</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
+  <header class="header">
     <!-- Logo, barra di ricerca, link Account / Ordini / Carrello -->
+    <div class="logo">
+      amazon
+    </div>
+
+    <form class="cerca">
+      <input type="text" placeholder="Cerca prodotti, categorie, brand...">
+      <button type="submit">Cerca</button>
+    </form>
+
+    <nav class="menu">
+      <a href="javascript:void(0)" class="account">Account</a>
+      <a href="javascript:void(0)" class="ordini">Ordini</a>
+      <a href="javascript:void(0)" class="carrello">Carrello (0)</a>
+    </nav>
+
   </header>
 
   <main>
 
     <section class="hero">
       <!-- Titolo grande, sottotitolo -->
+      <h2>Le offerte di oggi</h2>
+      <p>Sconti fino al 70% su elettronica, libri, casa e molto altro</p>
     </section>
 
     <section class="categorie">
       <!-- 4 card categoria -->
+
+      <h2>Categorie</h2>
+
+      <div class="card">
+        <div title="Elettronica" class="sfondoElettronica" alt="Elettronica"> Elettronica</div>
+        <div>
+          <h3>Elettronica</h3>
+          <a href="javascript:void(0)" class="scopri">Scopri di più</a>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div title="Libri" class="sfondoLibri" alt="Libri">Libri</div>
+        <div>
+          <h3>Libri</h3>
+          <a href="javascript:void(0)" class="scopri">Scopri di più</a>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div title="Abbigliamento" class="sfondoAbbigliamento" alt="Abbigliamento">Abbigliamento</div>
+        <div class="elettronica">
+          <h3>Abbigliamento</h3>
+          <a href="javascript:void(0)" class="scopri">Scopri di più</a>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div title="Casa" class="sfondoCasa" alt="Casa">Casa</div>
+        <div class="elettronica">
+          <h3>Casa</h3>
+          <a href="javascript:void(0)" class="scopri">Scopri di più</a>
+        </div>
+      </div>
+
     </section>
 
     <section class="prodotti">
       <!-- Griglia prodotti (Versione Base: HTML statico; Intermedia/Avanzata: generata da JS) -->
+      <h2>I più venduti</h2>
+
+      <div class="griglia">
+
+        <div class="prodotto">
+          <div title="Cuffie" class="immagine" alt="Cuffie"> Cuffie</div>
+          <h4 class="nome">Cuffie wireless con cancellazione del rumore</h4>
+          <p class="stelle">★★★★☆ <span>(4.2)</span></p>
+          <p class="prezzo">€ 89,99</p>
+          <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+
+        <div class="prodotto">
+          <div title="Tablet" class="immagine" alt="Tablet"> Tablet</div>
+          <h4 class="nome">Tablet 10 pollici 64GB</h4>
+          <p class="stelle">★★★★★ <span>(4.7)</span></p>
+          <p class="prezzo">€ 199,00</p>
+          <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+        <div class="prodotto">
+          <div title="Libro" class="immagine" alt="Libro"> Libro</div>
+          <h4 class="nome">Il romanzo dell'anno</h4>
+          <p class="stelle">★★★★☆ <span>(4.0)</span></p>
+          <p class="prezzo">€ 14,90</p>
+          <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+        <div class="prodotto">
+          <div title="Zaino" class="immagine" alt="Zaino"> Zaino</div>
+          <h4 class="nome">Zaino da viaggio 30L impermeabile</h4>
+          <p class="stelle">★★★★☆ <span>(4.3)</span></p>
+          <p class="prezzo">€ 49,99</p>
+          <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+        <div class="prodotto">
+          <div title="Lampada" class="immagine" alt="Lampada"> Lampada</div>
+          <hp class="nome">Lamhpada LED da scrivania orientabile</h4>
+            <p class="stelle">★★★☆☆ <span>(3.8)</span></p>
+            <p class="prezzo">€ 29,50</p>
+            <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+        <div class="prodotto">
+          <div title="Smartwatch" class="immagine" alt="Smartwatch"> Smartwatch</div>
+          <h4 class="nome">Smartwatch fitness con GPS</h4>
+          <p class="stelle">★★★★☆ <span>(4.4)</span></p>
+          <p class="prezzo">€ 119,00</p>
+          <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+        <div class="prodotto">
+          <div title="Mouse" class="immagine" alt="Mouse"> Mouse</div>
+          <h4 class="nome">Mouse ergonomico wireless</h4>
+          <p class="stelle">★★★★☆ <span>(4.1)</span></p>
+          <p class="prezzo">€ 24,90</p>
+          <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+        <div class="prodotto">
+          <div title="Caffettiera" class="immagine" alt="Caffettiera"> Caffettiera</div>
+          <h4 class="nome">Caffettiera moka 6 tazze</h4>
+          <p class="stelle">★★★★★ <span>(4.6)</span></p>
+          <p class="prezzo">€ 22,00</p>
+          <button class="aggiungi">Aggiungi al carrello</button>
+        </div>
+
+      </div>
     </section>
 
   </main>
@@ -34,4 +164,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

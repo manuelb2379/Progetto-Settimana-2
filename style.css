@@ -6,7 +6,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   color: #111;
   background: #fff;
@@ -30,3 +32,223 @@ button {
 }
 
 /* Scrivi qui sotto i tuoi stili */
+main{
+  max-width: 1200px;
+}
+
+/*header*/
+.header {
+  background-color: #131921;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+/*logo*/
+.logo {
+  float: left;
+  color: #ff9900;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+/*barra cerca + button*/
+.cerca {
+  width: 50%;
+  float: left;
+}
+
+.cerca input {
+  float: left;
+  width: 80%;
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+}
+
+.cerca button {
+  float: left;
+  width: 20%;
+  height: 40px;
+  border: none;
+  background-color: #febd69;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+/*menu a dx*/
+.menu {
+  float: left;
+  text-align: left;
+  line-height: 40px;
+}
+
+.menu a {
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.ordini:hover {
+  text-decoration: underline white;
+}
+.account:hover {
+  text-decoration: underline white;
+}
+
+.carrello {
+  background-color: #232f3e;
+  white-space: nowrap;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+.carrello:hover {
+  text-decoration: underline white;
+}
+
+/*sezione hero*/
+
+.hero {
+  background-color: #303f51;
+  text-align: center;
+  color: white;
+  height: 200px;
+  padding: 40px;
+}
+.hero h2 {
+  font-size: 30px;
+  padding: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+/*categorie*/
+
+.categorie {
+  background-color: #f7f7f7;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.categorie h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 20px 0;
+}
+
+.card {
+  float: left;
+  width: 23%;
+  margin-right: 23px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.card:last-child {
+  margin-right: 0;
+}
+
+.card h3 {
+  font-size: 18px;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+/*scopri di piu*/
+.scopri {
+  font-size: 15px;
+  color: #007185;
+  padding: 10px;
+}
+
+.scopri:hover {
+  text-decoration: underline;
+  color: #febd69;
+}
+/*sfondi card*/
+.sfondoElettronica {
+  height: 200px;
+  line-height: 200px;
+  vertical-align: center;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  background-color: #232f3e;
+}
+
+.sfondoLibri {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  background-color: #c45500;
+}
+
+.sfondoAbbigliamento {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  background-color: #146eb4;
+}
+.sfondoCasa {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  background-color: #067d62;
+}
+/*hover su card*/
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/*i piu venduti*/
+
+.prodotti {
+  background-color: #f7f7f7;
+  padding-left: 20px;
+}
+
+.prodotti h2 {
+  background-color: #f7f7f7;
+  padding: 20px 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+/*griglia*/
+.griglia {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*prodotti*/
+.prodotto {
+  float: left;
+  width: 23%;
+  margin: 0 23px 23px 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 400px;
+}
+
+.immagine{
+width: 250px;
+height: 250px;
+line-height: 250px;
+   margin: 10px;
+  vertical-align: center;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  background-color: #EEEEEE ;
+}
