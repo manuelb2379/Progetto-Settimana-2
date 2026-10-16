@@ -378,16 +378,16 @@ footer {
   font-size: 20px;
   background-color: #eeeeee;
 }
-
+/*scritta nel quadrato grigio e h3 sotto*/
 .boxInfo {
   margin-top: 10px;
 }
 
 .boxInfo h3 {
   font-size: 16px;
-  min-height: 40px;      /* titoli su 1 o 2 righe occupano lo stesso spazio */
+  min-height: 40px;     
 }
-
+/*stelle rating scritto e prezzo*/
 .rating {
   color: #ff9900;
   margin-bottom: 6px;
@@ -403,6 +403,7 @@ footer {
   margin-bottom: 10px;
 }
 /*per i button attivi ho usato lo stesso formato css di quelli fatti nella pagina html-css */
+
 /* Prodotti esauriti */
 .notAvailable button{
   opacity: 0.2;
