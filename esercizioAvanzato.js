@@ -17,103 +17,103 @@ REGOLE
 /* SCRIVI QUI LA TUA RISPOSTA */
 const prodotti = [
 
-   {
-      nome: "Cuffie Wireless Noise-Cancelling",
-      categoria: "Audio",
-      prezzo: 149.50,
-      rating: 1.5,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "iPad Pro",
-      categoria: "Elettronica",
-      prezzo: 699.99,
-      rating: 2.8,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Tastiera Meccanica Logitech",
-      categoria: "Informatica",
-      prezzo: 89.99,
-      rating: 4.2,
-      immagine: "unavailable",
-      disponibile: false
-   },
-   {
+    {
+        nome: "Cuffie Wireless Noise-Cancelling",
+        categoria: "Audio",
+        prezzo: 149.50,
+        rating: 1.5,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "iPad Pro",
+        categoria: "Elettronica",
+        prezzo: 699.99,
+        rating: 2.8,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Tastiera Meccanica Logitech",
+        categoria: "Informatica",
+        prezzo: 89.99,
+        rating: 4.2,
+        immagine: "unavailable",
+        disponibile: false
+    },
+    {
 
-      nome: "Monitor Gaming",
-      categoria: "Informatica",
-      prezzo: 249.00,
-      rating: 4.6,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Macchina Nespresso",
-      categoria: "Elettrodomestici",
-      prezzo: 119.99,
-      rating: 4.4,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Zaino Porta PC",
-      categoria: "Accessori",
-      prezzo: 39.99,
-      rating: 3.1,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Smartwatch Sport GPS",
-      categoria: "Elettronica",
-      prezzo: 199.00,
-      rating: 4.3,
-      immagine: "unavailable",
-      disponibile: false
-   },
-   {
-      nome: "Delitto e castigo",
-      categoria: "Libri",
-      prezzo: 20.00,
-      rating: 4.7,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Mouse Ottico Wireless",
-      categoria: "Informatica",
-      prezzo: 24.99,
-      rating: 4.0,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Cassa Bluetooth Portatile",
-      categoria: "Audio",
-      prezzo: 59.99,
-      rating: 4.5,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Lampada da Scrivania LED",
-      categoria: "Illuminazione",
-      prezzo: 29.99,
-      rating: 4.2,
-      immagine: "unavailable",
-      disponibile: true
-   },
-   {
-      nome: "Il conte di Montecristo",
-      categoria: "Libri",
-      prezzo: 34.00,
-      rating: 4.4,
-      immagine: "unavailable",
-      disponibile: false
-   }
+        nome: "Monitor Gaming",
+        categoria: "Informatica",
+        prezzo: 249.00,
+        rating: 4.6,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Macchina Nespresso",
+        categoria: "Elettrodomestici",
+        prezzo: 119.99,
+        rating: 4.4,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Zaino Porta PC",
+        categoria: "Accessori",
+        prezzo: 39.99,
+        rating: 3.1,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Smartwatch Sport GPS",
+        categoria: "Elettronica",
+        prezzo: 199.00,
+        rating: 4.3,
+        immagine: "unavailable",
+        disponibile: false
+    },
+    {
+        nome: "Delitto e castigo",
+        categoria: "Libri",
+        prezzo: 20.00,
+        rating: 4.7,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Mouse Ottico Wireless",
+        categoria: "Informatica",
+        prezzo: 24.99,
+        rating: 4.0,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Cassa Bluetooth Portatile",
+        categoria: "Audio",
+        prezzo: 59.99,
+        rating: 4.5,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Lampada da Scrivania LED",
+        categoria: "Illuminazione",
+        prezzo: 29.99,
+        rating: 4.2,
+        immagine: "unavailable",
+        disponibile: true
+    },
+    {
+        nome: "Il conte di Montecristo",
+        categoria: "Libri",
+        prezzo: 34.00,
+        rating: 4.4,
+        immagine: "unavailable",
+        disponibile: false
+    }
 ]
 console.log(prodotti)
 
@@ -124,13 +124,19 @@ console.log(prodotti)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function formattaPrezzo(prezzo){
-   let testo = String(prezzo);
-   testo = testo.replace ("." , ",");
-
+function formattaPrezzo(prezzo) {
+    let testo = String(prezzo);
+    testo = testo.replace(".", ",");
+    if (!testo.includes(",")) {
+    testo = testo + ",00";
+  } else if (testo.split(",")[1].length === 1) {
+    testo = testo + "0";
+  }
+    return "€ " + testo;
 }
+
 for (let i = 0; i < prodotti.length; i++) {
-  console.log(prodotti[i].nome + ": " + formattaPrezzo(prodotti[i].prezzo));
+    console.log(prodotti[i].nome + ": " + formattaPrezzo(prodotti[i].prezzo));
 }
 
 
@@ -143,22 +149,22 @@ for (let i = 0; i < prodotti.length; i++) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function stelline(rating) {
-   let stelle = Math.round(rating);
-   let result = "";
+    let stelle = Math.round(rating);
+    let result = "";
 
-   for (let i = 0; i < 5; i++) {
-    if (i < stelle) {
-      result = result + "★";
-    } else {
-      result = result + "☆";
+    for (let i = 0; i < 5; i++) {
+        if (i < stelle) {
+            result = result + "★";
+        } else {
+            result = result + "☆";
+        }
     }
-  }
 
-  return result;
+    return result;
 }
 
 for (let j = 0; j < prodotti.length; j++) {
-  console.log(prodotti[j].nome + ": rating " + prodotti[j].rating + " → " + stelline(prodotti[j].rating));
+    console.log(prodotti[j].nome + ": rating " + prodotti[j].rating + " → " + stelline(prodotti[j].rating));
 }
 
 
@@ -169,10 +175,10 @@ for (let j = 0; j < prodotti.length; j++) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function cat(categoria) {
-   for(let i = 0; i < prodotti.length; i++)
-      if(prodotti[i].categoria === categoria){
-         console.log(prodotti[i].nome);
-      }
+    for (let i = 0; i < prodotti.length; i++)
+        if (prodotti[i].categoria === categoria) {
+            console.log(prodotti[i].nome);
+        }
 }
 
 cat('Informatica');
@@ -185,12 +191,12 @@ cat('Informatica');
 
 let filter = [];
 
-function filtro(){
-   for(let i = 0; i < prodotti.length; i++){
-      if (prodotti[i].disponibile === true && prodotti[i].rating >= 3){
-         filter.push(prodotti[i]);
-      }
-   }
+function filtro() {
+    for (let i = 0; i < prodotti.length; i++) {
+        if (prodotti[i].disponibile === true && prodotti[i].rating >= 3) {
+            filter.push(prodotti[i]);
+        }
+    }
 }
 filtro()
 console.log(filter)
@@ -202,9 +208,41 @@ console.log(filter)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function renderProdotti(prodotti) {
+    let griglia = document.querySelector("#griglia");
+    let html = "";
 
+    for (let i = 0; i < prodotti.length; i++) {
+        let prod = prodotti[i];
+        let classe = 'scatola';
+        let bottone = '<button type="button" class="aggiungi">Aggiungi al carrello</button>';
+        if (!prod.disponibile) {
+            classe = 'scatola notAvailable'
+            bottone = '<button type="button" class="aggiungi">Esaurito</button>';
+        }
 
+        html += `
+            <div class="${classe}">
+               <div class="boxImg">${prod.nome}</div>
+        <div class="boxInfo">
+          <h3>${prod.nome}</h3>
+          <div class="rating">${stelline(prod.rating)} <span class="rate">(${prod.rating})</span></div>
+          <div class="prezzo">${formattaPrezzo(prod.prezzo)}</div>
+          ${bottone}
+        </div>
+      </div>
+    `;
+  }
 
+  griglia.innerHTML = html;
+}
+
+window.onload = function () {
+  renderProdotti(prodotti);
+};
+
+/*VEDI ESERCIZIO SOTTO FATTO MEZZO (BUTTON ESAURITO)*/ 
+                
 
 /* VERSIONE AVANZATA — Aggiungi al carrello
    Quando si clicca il bottone "Aggiungi al carrello", incrementa il contatore
@@ -214,6 +252,9 @@ console.log(filter)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+/*X DARIO ESERCIZIO FATTO A META INTEGRATO IN QUELLO SOPRA (IL FATTORE DEI BUTTON ESAURITI)*/ 
 
 
 /* VERSIONE AVANZATA — Ordinamento
